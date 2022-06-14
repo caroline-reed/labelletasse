@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+p {
+  /* margin: 2% 0; */
+}
+
+a {
+  /* color: black; */
+  text-decoration: none;
+}
+
+img {
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+
+
+.main {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  /* background-color: rgba(176, 143, 120); */
+}
+
+.container {
+  max-width: 100%;
+  overflow: visible;
+}
+
+
+/* styles for the menu page */
+.main #menu {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 2.5%;
+  background-color: beige;
+  display: grid;
+  grid-template-columns: [line1] 100% [line2];
+  grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+  grid-template-areas:
+    "menuTitle"
+    "menuBody"
+  ;
+}
+
+.main #menu #menuTitle {
+  grid-area: menuTitle;
+  width: 100%;
+  height: 62.5vh;
+  background-image:
+    linear-gradient(rgba(255, 245, 245, 0.2), rgba(255, 245, 245, 0.2)),
+    url('./images/croissants.jpg');
+  /* filter: contrast(105%) brightness(120%) saturate(120%); */
+  background-position: 0% 25%;
+  border-bottom: thin inset rgba(76, 43, 20, 1.0);
+}
+
+.main #menu h1 {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: normal;
+  padding: 50vh 0 0;
+  font-size: 525%;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  text-align: center;
+  color: snow;
+}
+
+.main #menu #cafeOrderToggle {
+  position: fixed;
+  top: 7.5vh;
+  right: 0.5vw;
+}
+
+.main #menu #cafeOrderToggle button {
+  font-family: sans-serif;
+  font-size: 200%;
+  width: 100%;
+  background-color: white;
+  padding: 0.75rem;
+  border: medium solid tan;
+  border-radius: 0.75rem;
+  /* border-radius: 0.0rem; */
+}
+
+.main #menu #menuBody {
+  grid-area: menuBody;
+  font-family: sans-serif;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+
+}
+
+.main #menu #menuByline {
+  text-align: left;
+  padding: 1.5% 0 5%;
+  width: 100%;
+}
+
+.main #menu #menuByline h3 {
+  font-size: 125%;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.main #menu #menuList {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+.main #menu #menuList #coffeeSizes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main #menu #menuList #coffeeSizes #drinkSizes {
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.main #menu #menuList h4 {
+  position: relative;
+  text-align: left;
+  font-size: 150%;
+  color: rgba(81, 48, 25 1.0);
+}
+
+.main #menu #menuList table {
+  position: relative;
+  padding: 0.5% 0 4%;
+  width: 100%;
+  height: auto;
+}
+
+.main #menu #menuList table tr {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main #menu #menuList table td {
+  position: relative;
+  font-size: 135%;
+  color: rgba(81, 48, 25 1.0);
+  padding: 0.25% 0;
+}
+
+
+
+/* styles for the events page */
+.main #events #eventOrder {
+  position: fixed;
+  top: 10vh;
+  right: 2.5vw;
+}
+
+.main #events #ticketLink {
+  font-family: sans-serif;
+  font-size: 275%;
+  font-weight: normal;
+  color: black;
+  text-shadow: 0.04rem 0.04rem 0.04rem lightgray;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: medium solid tan;
+  background-color: snow;
+  /* background-color: rgba(255, 255, 255, 0.75); */
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.0rem white;
+  /* filter: drop-shadow(0.1rem 0.1rem 0.1rem black); */
+}
+
+.main #eventBody {
+  position: relative;
+  min-width: 100vw;
+  width: 100%;
+  height: 100%;
+  background-color: beige;
+}
+
+/* .main #eventBody #eventVid {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  filter: sepia(0%) saturate(125%) brightness(65%) contrast(125%);
+} */
+
+.main #eventBody #events {
+  font-family: sans-serif;
+  position: relative;
+  /* top: 0;
+  left: 0; */
+  /* padding: 0 0 10%; */
+
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.main #events h1 {
+  position: relative;
+  font-size: 1px;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.main #events #eventCalendar {
+  width: 100%;
+  margin: 0;
+  padding: 4.5% 0;
+}
+
+.main #events #eventCalendar h3 {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 220%;
+  font-weight: normal;
+  color: snow;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  text-align: center;
+  padding: 2.5% 0;
+  z-index: 1;
+}
+
+.main #events #eventCalGrid {
+  width: 80%;
+  margin: 0 auto;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: [row1-start] 3rem [row2-start] repeat(5, 8rem);
+}
+
+.main #events #eventCalGrid .weekday {
+  font-weight: bold;
+  font-size: 140%;
+  color: snow;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  text-align: center;
+}
+
+.main #events #eventCalGrid .calItem {
+  border: thin solid beige;
+  background-color: snow;
+  border-radius: 0.5rem;
+  /* background-color: rgba(245, 245, 245, 0.75); */
+}
+
+
+
+/* styles for the ticket order page */
+.main #eventOrderForm {
+
+}
+
+
+/* style for the about us page */
+.main #aboutUs {
+  position: relative;
+  font-family: sans-serif;
+  width: 100%;
+  height: auto;
+  background-color: beige;
+  /* display: grid;
+  grid-template-columns: [line1] 100% [line2];
+  grid-template-rows: [row1-start] 65vh [row2-start] auto [row2-end];
+  grid-template-areas:
+    "aboutTitle"
+    "aboutInfo"; */
+}
+
+/* .main #aboutUs #aboutTitleBk {
+  position: relative;
+  top: 0;
+  grid-area: aboutTitle;
+  width: 100%;
+  height: 72.5vh;
+  background-color: rgba(61, 28, 5, 1.0);
+  border-bottom: thin inset rgba(61, 28, 5, 1.0);
+  z-index: -1;
+} */
+
+.main #aboutUs h1 {
+  font-family: sans-serif;
+  /* position: absolute;
+  top: 60vh;
+  left: 40vw; */
+  font-size: 200%;
+  padding: 5rem 0 2.5rem;
+  color: black;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  text-align: center;
+  font-weight: normal;
+  z-index: 1;
+}
+
+/* .main #aboutUs video {
+  position: absolute;
+  top: 0;
+  filter: sepia(0%) saturate(100%) brightness(75%) contrast(150%) opacity(60%);
+  z-index: 0;
+  height: auto;
+  width: 100%;
+} */
+
+.main #aboutUs #aboutInfo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1% 0;
+  z-index: 1;
+  color: black;
+  background-color: beige;
+  display: flex;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: [line1] 70% [line2] 30% [line3];
+  grid-template-rows: [row1-start] 100% [row1-end];
+  grid-template-areas:
+  "bio contact"; */
+}
+
+.main #aboutUs #bio {
+  position: relative;
+  grid-area: bio;
+  padding: 0 3.5% 0 0;
+  width: 100%;
+}
+
+.main #aboutUs #bio h3 {
+  font-size: 1px;
+  visibility: hidden;
+  /* font-size: 150%;
+  text-align: center;
+  padding: 3% 0;
+  color: rgba(56, 23, 0, 1.0); */
+}
+
+.main #aboutUs #bio p {
+  font-size: 125%;
+  padding: 1.5% 2.5%;
+}
+
+.main #aboutUs #contactUs {
+  position: relative;
+  grid-area: contact;
+  font-size: 120%;
+  padding: 2% 4%;
+  width: 40%;
+  border: 0.25rem solid tan;
+  border-radius: 5rem 0 0 5rem;
+}
+
+.main #aboutUs #contactUs h3 {
+  font-size: 1px;
+  visibility: hidden;
+}
+
+.main #aboutUs #contactUs #contactInfo {
+  padding: 2.5% 0 1.5%;
+
+}
+
+.main #aboutUs #contactUs #contactInfo h4 {
+  padding: 1% 0;
+}
+
+.main #aboutUs #contactUs #contactInfo p {
+  padding: 0.5% 0;
+}
+
+.main #aboutUs #contactUs #social {
+  width: 100%;
+  padding: 1% 0;
+}
+
+.main #aboutUs #contactUs #social a {
+  display: inline;
+  font-size: 125%;
+  padding: 0 5.5% 0 0.5%;
+}
+
+.main #aboutUs #contactUs #hours {
+  padding: 2.5% 0 5%;
+}

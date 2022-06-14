@@ -4,13 +4,12 @@ const mongoose = require('mongoose');
 const { MongoClient } = require('mongodb');
 const caferoutes = require('./routes/cafeorderapi');
 const eventroutes = require('./routes/eventorderapi');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 require('dotenv').config();
-console.log(process.env);
 
 const app = express();
 app.use(cors());

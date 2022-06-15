@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy": "http://localhost:8080",
+  "proxy": "http://`${process.env.PORT}`",
   "engines": {
     "node": "16.14.0"
   },

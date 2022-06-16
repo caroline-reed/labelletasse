@@ -12,15 +12,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+app.listen(process.env.PORT, () => console.log("Server Running"));
 
 router.use(express.urlencoded({ extended: true }));
 
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "reedce9@gmail.com",
-    pass: "oohjlqpvjqbhhhll",
+    user: process.env.CMADDY,
+    pass: process.env.CMPASS,
   }
 });
 
@@ -42,7 +42,7 @@ router.post("/contact", async (req, res) => {
 
   const mail = {
     from: email,
-    to: "reedce9@gmail.com",
+    to: process.env.CMADDY,
     subject: "Customer Query",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
